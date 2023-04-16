@@ -1,0 +1,9 @@
+{
+  "author_name": "Christian Thomas Nitschke",
+  "author_email": "christian@nitschke.org",
+  "project_name": "Project name",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "__package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_description": "A short description of your project",
+  "project_url": "The URL of the project"
+}

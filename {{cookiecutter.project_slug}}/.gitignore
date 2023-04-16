@@ -1,0 +1,20 @@
+# Emacs
+*~
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build and installation
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environment
+.venv
+
+# Environment managers
+.pdm.toml
