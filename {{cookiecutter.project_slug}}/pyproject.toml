@@ -23,13 +23,10 @@ dependencies = []
 dynamic = ["version"]
 
 [project.optional-dependencies]
-
-[tool.setuptools_scm]
-
-[tool.pdm]
-
-[tool.pdm.dev-dependencies]
 test = ["pytest", "pytest-cov"]
 lint = ["ruff"]
 format = ["black"]
 build = ["build"]
+dev = ["{{cookiecutter.project_slug}}[test,lint,format,build]"]
+
+[tool.setuptools_scm]
