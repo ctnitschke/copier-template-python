@@ -30,3 +30,12 @@ build = ["build"]
 dev = ["{{cookiecutter.project_slug}}[test,lint,format,build]"]
 
 [tool.setuptools_scm]
+
+{% if cookiecutter.pdm %}
+[tool.pdm]
+
+[tool.pdm.scripts]
+test = "pytest --cov=src tests/"
+lint = "ruff check ."
+format = "black ."
+{% endif %}

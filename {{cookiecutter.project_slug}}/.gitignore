@@ -17,4 +17,4 @@ dist/
 .venv
 
 # Environment managers
-.pdm.toml
+.pdm-python

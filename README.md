@@ -28,3 +28,12 @@ Code formatter.
 ### mypy
 
 Type checker.
+
+## Optional tooling
+
+### PDM
+
+I use [PDM](https://pdm.fming.dev/latest/) as package and dependency
+manager because it suits my style. It works nicely with cookiecutter,
+respects the standards well, is more versatile than `flit` and more
+lightweight than `hatch`.
