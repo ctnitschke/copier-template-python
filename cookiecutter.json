@@ -6,5 +6,5 @@
   "__package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "project_description": "A short description of your project",
   "project_url": "The URL of the project",
-  "pdm": false
+  "environment_manager": ["uv", "poetry", "venv/pip"]
 }
