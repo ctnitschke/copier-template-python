@@ -2,7 +2,7 @@
 {% if cookiecutter.environment_manager == "poetry" %}
 # Require poetry > 2.0 to support optional dependency specificiation and dependency groups as per pypa standards
 requires = ["poetry-core>=2.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
-build-backend = "poetry.core.masonry.api" # Use poetry's standard build backend
+build-backend = "poetry_dynamic_versioning.backend" # Use poetry's standard build backend
 {% else %}
 requires = ["setuptools>=61", "setuptools-scm[toml]>=7.1", "wheel"]
 build-backend = "setuptools.build_meta"
