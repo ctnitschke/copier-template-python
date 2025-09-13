@@ -29,11 +29,12 @@ Code formatter.
 
 Type checker.
 
-## Optional tooling
+### Environment managers
 
-### PDM
+The template supports `poetry` or `uv` as environment managers, or doing things by hand using `venv` and `pip`.
 
-I use [PDM](https://pdm-project.org/en/latest/) as package and dependency
-manager because it suits my style. It works nicely with cookiecutter,
-respects the standards well, is more versatile than `flit` and more
-lightweight than `hatch`.
+### VCS-based versioning
+
+Versions are derived from version control using either
+[`poetry-dynamic-versioning`](https://github.com/mtkennerly/poetry-dynamic-versioning)
+when using poetry or [`setuptools-scm`](https://github.com/pypa/setuptools-scm) when not.
