@@ -1,0 +1,34 @@
+author_name:
+    type: str
+    help: Your name
+    default: "Christian Thomas Nitschke"
+
+author_email:
+    type: str
+    help: Your e-mail address
+
+project_name:
+    type: str
+    help: What shall the project be called?
+
+project_slug:
+    type: str
+    help: Choose a project slug.
+    default: "{{ project_name.lower().replace(' ', '-') }}"
+
+package_name:
+    type: str
+    help: Choose a package name.
+    default: "{{ project_slug.replace('-', '_') }}"
+
+project_description:
+    type: str
+    help: Describe your project.
+
+environment_manager:
+    type: str
+    choices:
+      - uv
+      - poetry
+      - venv/pip
+

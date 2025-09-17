@@ -1,5 +1,5 @@
 [build-system]
-{% if cookiecutter.environment_manager == "poetry" %}
+{% if environment_manager == "poetry" %}
 # Require poetry > 2.0 to support optional dependency specificiation and dependency groups as per pypa standards
 requires = ["poetry-core>=2.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
 build-backend = "poetry_dynamic_versioning.backend" # Use poetry's standard build backend
@@ -9,18 +9,18 @@ build-backend = "setuptools.build_meta"
 {% endif %}
 
 [project]
-name = "{{cookiecutter.project_slug}}"
-description = "{{cookiecutter.project_description}}"
+name = "{{project_slug}}"
+description = "{{project_description}}"
 readme = "README.md"
 requires-python = ">=3.11"
 keywords = []
 authors = [
-  { name = "{{cookiecutter.author_name}}", email = "{{cookiecutter.author_email}}" },
+  { name = "{{author_name}}", email = "{{author_email}}" },
 ]
 {# Rationale: The authors are all contributers, the maintainers are the people currently doing the main work on the
   project. Consequently, in the beginning, the author is also the maintainer. #}
 maintainers = [
-  { name = "{{cookiecutter.author_name}}", email = "{{cookiecutter.author_email}}" },
+  { name = "{{author_name}}", email = "{{author_email}}" },
 ]
 
 classifiers = [
@@ -38,11 +38,11 @@ test = ["pytest", "pytest-cov"]
 lint = ["ruff"]
 format = ["ruff"]
 build = ["build"]
-dev = [{include-group = "test"}, {include-group = "lint"}, {include-group = "format"}{% if cookiecutter.environment_manager != "poetry" %}, {include-group = "build"}{% endif %}]
+dev = [{include-group = "test"}, {include-group = "lint"}, {include-group = "format"}{% if environment_manager != "poetry" %}, {include-group = "build"}{% endif %}]
 
 [tool.setuptools_scm]
 
-{% if cookiecutter.environment_manager == "poetry" %}
+{% if environment_manager == "poetry" %}
 [tool.poetry]
 version = "0.0.0"
 
