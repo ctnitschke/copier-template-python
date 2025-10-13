@@ -32,3 +32,12 @@ environment_manager:
       - poetry
       - venv/pip
 
+_exclude:
+    - "copier.yaml" 
+    - "copier.yml"
+    - "~*"
+    - "*.py[co]"
+    - "__pycache__"
+    - ".git"
+    - ".DS_Store"
+    - ".svn"
