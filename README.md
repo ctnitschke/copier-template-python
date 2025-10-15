@@ -19,11 +19,7 @@ Testing.
 
 ### ruff
 
-Linter.
-
-### black
-
-Code formatter.
+Linter and code formatter.
 
 ### mypy
 
