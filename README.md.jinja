@@ -51,3 +51,24 @@ pip install --group dev -e .
 ```
 {% endif %}
 
+## pre-commit
+
+This project uses pre-commit for automatic checks. If you haven't installed it yet, run
+
+{% if environment_manager == "uv" %}
+```sh
+uv tool install pre-commit
+```
+{% else %}
+```sh
+pipx install pre-commit
+```
+{% endif %}
+
+Then, run
+
+```sh
+pre-commit install
+```
+
+to enable pre-commit and run the hooks at every commit.
