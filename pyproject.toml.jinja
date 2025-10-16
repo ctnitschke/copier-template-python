@@ -37,8 +37,9 @@ dynamic = ["version"]
 test = ["pytest", "pytest-cov"]
 lint = ["ruff"]
 format = ["ruff"]
+{% if type_checking %}type-checking = ["mypy"]{% endif %}
 build = ["build"]
-dev = [{include-group = "test"}, {include-group = "lint"}, {include-group = "format"}{% if environment_manager != "poetry" %}, {include-group = "build"}{% endif %}, mypy]
+dev = [{include-group = "test"}, {include-group = "lint"}, {include-group = "format"}{% if environment_manager != "poetry" %}, {include-group = "build"}{% endif %}{% if type_checking %}, {include-group = "type-checking"}{% endif %},]
 
 [tool.setuptools_scm]
 

@@ -32,6 +32,10 @@ environment_manager:
       - poetry
       - venv/pip
 
+type_checking:
+    type: bool
+    help: Use type-checking?
+
 _exclude:
     - "copier.yaml" 
     - "copier.yml"
